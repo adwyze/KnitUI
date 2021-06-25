@@ -213,3 +213,18 @@ export const AlertActionsWrapper = styled.span<IStyledAlert>`
     margin-right: 0.7rem;
   }
 `
+
+export const BannerAlertWrapper = styled.div<IStyledAlert>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.8rem;
+  padding: 0 2.8rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  background-color: ${props => getBackgroundColor(props)};
+`

@@ -9,8 +9,10 @@ import {
   number,
 } from "@storybook/addon-knobs"
 import Alert from "./Alert"
+import BannerAlert from "./BannerAlert"
 import { AlertProps, placementType } from "./types"
 import { Button } from ".."
+import Icon from "../Icon"
 import Alerts from "./"
 
 const Readme = require("./Alerts.README.md")
@@ -548,6 +550,16 @@ stories
           />
         </Center>
       </>
+    )
+  })
+  .add("BannerAlert", () => {
+    return (
+      <BannerAlert type="danger">
+        <Icon type="oWarning" size="18px" fill="white" />
+        <p style={{ marginLeft: 7 }}>
+          You don't seem to be connected to Internet.
+        </p>
+      </BannerAlert>
     )
   })
 
